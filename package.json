@@ -1,5 +1,5 @@
 {
-  "name": "@bankofai/sun-kit",
+  "name": "@sun-protocol/sun-kit",
   "version": "1.1.0",
   "description": "SUNSWAP SDK — typed client for SUN.IO read APIs and wallet-dependent on-chain operations (swap, liquidity, positions)",
   "main": "./dist/index.js",
@@ -37,15 +37,15 @@
     "defi",
     "sdk"
   ],
-  "author": "BankOfAI <gummy780j@gmail.com>",
+  "author": "SUN Protocol",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BofAI/sun-kit.git"
+    "url": "https://github.com/sun-protocol/sun-kit.git"
   },
-  "homepage": "https://github.com/BofAI/sun-kit#readme",
+  "homepage": "https://github.com/sun-protocol/sun-kit#readme",
   "bugs": {
-    "url": "https://github.com/BofAI/sun-kit/issues"
+    "url": "https://github.com/sun-protocol/sun-kit/issues"
   },
   "engines": {
     "node": ">=18.0.0"
