@@ -44,7 +44,7 @@ export const WTRX_NILE = 'TYsbWxNnyTgsZaTFaue9hqpxkU3Fkco94a'
 // ---------------------------------------------------------------------------
 
 export const SUNSWAP_V2_MAINNET_FACTORY = 'TKWJdrQkqHisa1X8HUdHEfREvTzw4pMAaY'
-export const SUNSWAP_V2_MAINNET_ROUTER = 'TKzxdSv2FZKQrEqkKVgp5DcwEXBEKMg2Ax'
+export const SUNSWAP_V2_MAINNET_ROUTER = 'TNJVzGqKBWkJxJB5XYSqGAwUTV15U24pPq'
 
 export const SUNSWAP_V2_NILE_FACTORY = 'THomLGMLhAjMecQf9FQjbZ8a1RtwsZLrGE'
 export const SUNSWAP_V2_NILE_ROUTER = 'TMn1qrmYUMSTXo9babrJLzepKZoPC7M6Sy'
