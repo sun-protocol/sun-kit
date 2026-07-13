@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// @bankofai/sun-kit — public API
+// @sun-protocol/sun-kit — public API
 // ---------------------------------------------------------------------------
 
 // SunAPI: read-only HTTP client for SUN.IO open API

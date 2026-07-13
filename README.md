@@ -1,4 +1,4 @@
-# @bankofai/sun-kit
+# @sun-protocol/sun-kit
 
 TypeScript SDK for [SUN.IO](https://sun.io) / SUNSWAP on the TRON blockchain.
 
@@ -7,12 +7,12 @@ Provides two entry points:
 - **`SunAPI`** — typed HTTP client for all SUN.IO read-only endpoints (pools, tokens, prices, positions, farms, etc.). Zero dependencies beyond `fetch`.
 - **`SunKit`** — wallet-dependent on-chain operations (swap, liquidity, positions, contract calls). Requires `tronweb`.
 
-Built as a shared library for [@bankofai/sun-mcp-server](https://github.com/AnotherOneNewCoder/sun-mcp-server) and the upcoming `sun-cli`.
+Built as a shared library for [@sun-protocol/sun-mcp-server](https://github.com/sun-protocol/sun-mcp-server) and the upcoming `sun-cli`.
 
 ## Install
 
 ```bash
-npm install @bankofai/sun-kit
+npm install @sun-protocol/sun-kit
 # tronweb is an optional peer dep — install it if you use SunKit (on-chain ops)
 npm install tronweb
 ```
@@ -22,7 +22,7 @@ npm install tronweb
 ### Read-only: SunAPI
 
 ```typescript
-import { SunAPI } from '@bankofai/sun-kit'
+import { SunAPI } from '@sun-protocol/sun-kit'
 
 const api = new SunAPI()
 
@@ -42,7 +42,7 @@ No wallet, no tronweb — just HTTP.
 ### On-chain: SunKit
 
 ```typescript
-import { SunKit, type Wallet } from '@bankofai/sun-kit'
+import { SunKit, type Wallet } from '@sun-protocol/sun-kit'
 
 // You provide a Wallet implementation (see below)
 const kit = new SunKit({
@@ -102,7 +102,7 @@ const balances = await kit.getBalances({
 sun-kit does **not** ship a wallet implementation. You bring your own:
 
 ```typescript
-import type { Wallet } from '@bankofai/sun-kit'
+import type { Wallet } from '@sun-protocol/sun-kit'
 
 class MyWallet implements Wallet {
   readonly type = 'my-wallet'
@@ -119,8 +119,8 @@ class MyWallet implements Wallet {
 ```
 
 Reference implementations:
-- `LocalWallet` (raw private key) — see [sun-mcp-server/src/wallet/local-wallet.ts](https://github.com/AnotherOneNewCoder/sun-mcp-server)
-- `AgentWalletAdapter` (encrypted agent-wallet) — see [sun-mcp-server/src/wallet/agent-wallet-adapter.ts](https://github.com/AnotherOneNewCoder/sun-mcp-server)
+- `LocalWallet` (raw private key) — see [sun-mcp-server/src/wallet/local-wallet.ts](https://github.com/sun-protocol/sun-mcp-server)
+- `AgentWalletAdapter` (encrypted agent-wallet) — see [sun-mcp-server/src/wallet/agent-wallet-adapter.ts](https://github.com/sun-protocol/sun-mcp-server)
 
 ## API Reference
 
@@ -178,7 +178,7 @@ All methods return `Promise<ApiResponse<T>>`.
 ## Networks
 
 ```typescript
-import { TronNetwork, getNetworkConfig, NETWORKS } from '@bankofai/sun-kit'
+import { TronNetwork, getNetworkConfig, NETWORKS } from '@sun-protocol/sun-kit'
 
 getNetworkConfig('mainnet')  // or 'tron', 'trx'
 getNetworkConfig('nile')     // or 'testnet'
@@ -199,7 +199,7 @@ import {
   SUNSWAP_V3_MAINNET_FACTORY,
   SUNSWAP_V3_MAINNET_POSITION_MANAGER,
   // ...
-} from '@bankofai/sun-kit'
+} from '@sun-protocol/sun-kit'
 ```
 
 ## Error Handling
@@ -207,7 +207,7 @@ import {
 All errors thrown by SunKit are instances of `SunKitError`:
 
 ```typescript
-import { SunKitError } from '@bankofai/sun-kit'
+import { SunKitError } from '@sun-protocol/sun-kit'
 
 try {
   await kit.swap({ ... })
@@ -235,7 +235,7 @@ Error codes:
 ## Architecture
 
 ```
-@bankofai/sun-kit
+@sun-protocol/sun-kit
 ├── SunAPI          (read-only HTTP, zero deps)
 │   └── 23 typed methods -> SUN.IO open API
 │
